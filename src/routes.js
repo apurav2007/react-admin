@@ -25,7 +25,10 @@ import Widgets from './views/Widgets/'
 
 export default (
   <Router history={hashHistory}>
-    <Route path="/" name="Home" component={Full}>
+    <Route path="/" name="Home" component={Simple}>
+    <IndexRoute component={Login}/>
+    </Route>
+    <Route path="" name="Dashboard" component={Full}>
       <IndexRoute component={Dashboard}/>
       <Route path="dashboard" name="Dashboard" component={Dashboard}/>
       <Route path="components/" name="Components">
