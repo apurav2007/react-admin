@@ -85,6 +85,9 @@ class Sidebar extends Component {
                   <Link to={'/pages/login'} className="nav-link" activeClassName="active"><i className="icon-star"></i> Login</Link>
                 </li>
                 <li className="nav-item">
+                  <Link to={'/pages/forgot'} className="nav-link" activeClassName="active"><i className="icon-star"></i> Forgot</Link>
+                </li>
+                <li className="nav-item">
                   <Link to={'/pages/register'} className="nav-link" activeClassName="active"><i className="icon-star"></i> Register</Link>
                 </li>
                 <li className="nav-item">

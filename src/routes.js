@@ -18,6 +18,7 @@ import Tabs from './views/Components/Tabs/'
 import FontAwesome from './views/Icons/FontAwesome/'
 import SimpleLineIcons from './views/Icons/SimpleLineIcons/'
 import Login from './views/Pages/Login/'
+import Forgot from './views/Pages/Forgot/'
 import Register from './views/Pages/Register/'
 import Page404 from './views/Pages/Page404/'
 import Page500 from './views/Pages/Page500/'
@@ -53,6 +54,7 @@ export default (
     <Route path="pages/" name="Pages" component={Simple}>
       <IndexRoute component={Page404}/>
       <Route path="login" name="Login Page" component={Login}/>
+      <Route path="forgot" name="Forgot Page" component={Forgot}/>
       <Route path="register" name="Register Page" component={Register}/>
       <Route path="404" name="Page 404" component={Page404}/>
       <Route path="500" name="Page 500" component={Page500}/>
