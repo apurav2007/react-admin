@@ -8649,3 +8649,6 @@ base-chart.chart {
 
 .label-pill {
   border-radius: 1rem !important; }
+.help-block{
+  color: red;font-size: 12px;}
+.has-error{border: 1px solid red;}

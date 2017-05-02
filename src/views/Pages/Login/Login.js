@@ -29,7 +29,7 @@ class Login extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-  
+
     if (this.isValid()) {   alert('111');
       this.setState({ errors: {}, isLoading: true });
       this.props.login(this.state).then(
@@ -64,11 +64,19 @@ class Login extends Component {
                     error={errors.email}
                     onChange={this.onChange}
                     icon="icon-envelope-open"
+                    type="text"
                   />
-                  <div className="input-group mb-2">
-                    <span className="input-group-addon"><i className="icon-lock"></i></span>
-                    <input type="password" className="form-control" name={password} onChange={this.onChange} placeholder="Password"/>
-                  </div>
+
+                  <TextFieldGroup
+                    field="password"
+                    label="Password"
+                    value={password}
+                    error={errors.password}
+                    onChange={this.onChange}
+                    icon="icon-lock"
+                    type="password"
+                  />
+
 
                   <div className="row">
                     <div className="col-6">
