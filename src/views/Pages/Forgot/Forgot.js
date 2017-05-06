@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 
 class Forgot extends Component {
   render() {
@@ -9,7 +10,7 @@ class Forgot extends Component {
             <div className="card-group mb-0">
               <div className="card p-2">
                 <div className="card-block">
-                  <h1>Forgot Password</h1>
+                  <h2>Forgot Password</h2>
                   <p className="text-muted">Email your email for reset password link.</p>
                   <div className="input-group mb-1">
                     <span className="input-group-addon"><i className="icon-envelope-open"></i></span>
@@ -21,7 +22,7 @@ class Forgot extends Component {
                       <button type="button" className="btn btn-primary px-2">Reset Password</button>
                     </div>
                     <div className="col-6 text-right">
-                      <button type="button" className="btn btn-link px-0">Back</button>
+                      <Link to={'/'} className="btn btn-link px-0" > Back</Link>
                     </div>
                   </div>
                 </div>
