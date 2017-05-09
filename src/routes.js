@@ -7,6 +7,7 @@ import Simple from './containers/Simple/'
 
 import Charts from './views/Charts/'
 import Dashboard from './views/Dashboard/'
+import Users from './views/Users/'
 import Buttons from './views/Components/Buttons/'
 import Cards from './views/Components/Cards/'
 import Forms from './views/Components/Forms/'
@@ -32,6 +33,7 @@ export default (
     <Route path="" name="Dashboard" component={Full}>
       <IndexRoute component={Dashboard}/>
       <Route path="dashboard" name="Dashboard" component={Dashboard}/>
+      <Route path="users" name="Users" component={Users}/>
       <Route path="components/" name="Components">
         <IndexRoute component={Buttons}/>
         <Route path="buttons" name="Buttons" component={Buttons}/>
