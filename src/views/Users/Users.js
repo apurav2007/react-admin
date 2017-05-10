@@ -1,10 +1,54 @@
 import React, { Component } from 'react';
 
-class Tables extends Component {
+class Users extends Component {
+  constructor() {
+     super();
+
+     this.state = {
+        data:
+        [
+           {
+              "id":1,
+              "name":"Vishnu Serghei",
+              "email":"Vishnu@gmail.com",
+              "status":"1",
+              "date":"2012/01/01"
+           },
+           {
+              "id":2,
+              "name":"Vishnu 2",
+              "email":"Vishnu2@gmail.com",
+              "status":"0",
+              "date":"2012/01/01"
+           },
+           {
+              "id":3,
+              "name":"Vishnu 3",
+              "email":"Vishnu3@gmail.com",
+              "status":"1",
+              "date":"2012/01/01"
+           },
+           {
+              "id":4,
+              "name":"Vishnu 4",
+              "email":"Vishnu4@gmail.com",
+              "status":"1",
+              "date":"2012/01/01"
+           },
+           {
+              "id":5,
+              "name":"Vishnu 5",
+              "email":"Vishnu5@gmail.com",
+              "status":"0",
+              "date":"2012/01/01"
+           },
+
+        ]
+     }
+  }
   render() {
     return (
       <div className="animated fadeIn">
-
         <div className="row">
           <div className="col-lg-12">
             <div className="card">
@@ -23,57 +67,7 @@ class Tables extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Vishnu Serghei</td>
-                      <td>vishnu@gmail.com</td>
-                      <td>2012/01/01</td>
-                      <td>
-                        <span className="badge badge-success">Active</span>
-                      </td>
-                      <td>
-                        <a href=""><i className="fa fa-edit fa-lg"></i></a>
-                        &nbsp;&nbsp;
-                        <a href=""><i className="fa fa-remove fa-lg"></i></a>
-                     </td>
-
-                    </tr>
-                    <tr>
-                      <td>Zbyněk Phoibos</td>
-                      <td>Phoibos@gmail.com</td>
-                      <td>2012/02/01</td>
-                        <td>
-                        <span className="badge badge-danger">Banned</span>
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Einar </td>
-                      <td>randall@gmail.com</td>
-                      <td>2012/02/01</td>
-                      <td>
-                        <span className="badge badge-default">Inactive</span>
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Félix Troels</td>
-                      <td>rroels@gmail.com</td>
-                      <td>2012/03/01</td>
-                      <td>
-                        <span className="badge badge-warning">Pending</span>
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Aulus Agmundr</td>
-                      <td>agmundr@gmail.com</td>
-                      <td>2012/01/21</td>
-
-                      <td>
-                        <span className="badge badge-success">Active</span>
-                      </td>
-                      <td></td>
-                    </tr>
+                      {this.state.data.map((user, i) => <TableRow key = {i} data = {user} />)}
                   </tbody>
                 </table>
                 <nav className="pull-right">
@@ -93,9 +87,28 @@ class Tables extends Component {
           </div>
         </div>
       </div>
-
     )
   }
 }
 
-export default Tables;
+class TableRow extends React.Component {
+   render() {
+      return (
+        <tr>
+          <td>{this.props.data.name}</td>
+          <td>{this.props.data.email}</td>
+          <td>{this.props.data.date}</td>
+          <td>
+            <span className={ this.props.data.status==1 ? 'badge badge-success':'badge badge-danger' } > { this.props.data.status==1 ? 'Active':'Inactive' }</span>
+          </td>
+          <td>
+            <a href=""><i className="fa fa-edit fa-lg"></i></a>
+            &nbsp;&nbsp;
+            <a href=""><i className="fa fa-remove fa-lg"></i></a>
+          </td>
+        </tr>
+      );
+   }
+}
+
+export default Users;
