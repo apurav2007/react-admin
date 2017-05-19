@@ -54,6 +54,7 @@ class Users extends Component {
             <div className="card">
               <div className="card-header">
                 <i className="fa fa-align-justify"></i> Users Manager
+                <button type="button" class="btn btn-success btn-sm pull-right">Primary</button>
               </div>
               <div className="card-block">
                 <table className="table table-bordered table-striped table-condensed">
