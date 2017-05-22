@@ -1601,7 +1601,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .form-check {
   position: relative;
-  display: block;
+  display: block;``
   margin-bottom: 0.5rem; }
   .form-check.disabled .form-check-label {
     color: #b0bec5;
@@ -8652,3 +8652,9 @@ base-chart.chart {
 .help-block{
   color: red;font-size: 12px;}
 .has-error{border: 1px solid red;}
+
+.m-t-0{margin-top: 0px !important};
+.m-t-5{margin-top: 5px};
+
+
+.p-t-5{margin-top: 5px};
