@@ -2,14 +2,14 @@ import React from 'react';
 import classnames from 'classnames';
 
 const TextFieldGroup = ({ field, value, label, error, type, onChange, checkUserExists }) => {
-  return (<div className={classnames('form-group row', { 'has-error': error })}>
+  return (
+    <div className={classnames('form-group row', { 'has-error': error })}>
       <label className="col-md-2 form-control-label" for="text-input">{label}</label>
       <div className="col-md-6">
       <input
         onChange={onChange}
         onBlur={checkUserExists}
         value={value}
-
         type={type}
         name={field}
         className="form-control"
