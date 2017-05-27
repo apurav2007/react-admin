@@ -26,8 +26,6 @@ class Add extends Component {
                     <TextFieldGroup field="password" label="Password"  type="password" onChange={this.onChange} />
                     <TextFieldGroup field="cpassword" label="Confirm Password"  type="password" onChange={this.onChange} />
 
-
-
                     <div className="form-group row">
                       <label className="col-md-2 form-control-label" for="select">Role</label>
                       <div className="col-md-6">
@@ -39,7 +37,7 @@ class Add extends Component {
                       </div>
                     </div>
                     <div className="form-group row">
-                      <label className="col-md-2 form-control-label">Inline Radios</label>
+                      <label className="col-md-2 form-control-label">Gender</label>
                       <div className="col-md-6">
                         <label className="radio-inline" for="inline-radio1">
                           <input type="radio" id="inline-radio1" name="inline-radios" value="option1"/> Male
